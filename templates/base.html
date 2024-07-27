@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}" />
+
+    {% if page.title %}
+    {% set section = get_section(path=page.ancestors[1], metadata_only=true) %}
+    {% set title = [ config.title, section.title, page.title ] | join(sep=" -> ") %}
+    {% elif section.title %}
+    {% set title = [ config.title, section.title ] | join(sep=" -> ") %}
+    {% elif config.title %}
+    {% set title = config.title %}
+    {% endif %}
+
+    {% if page.description %}
+    {% set description = page.description | truncate(length=150) %}
+    {% elif section.description %}
+    {% set description = section.description | truncate(length=150) %}
+    {% elif config.description %}
+    {% set description = config.description | truncate(length=150) %}
+    {% endif %}
+
+    {% if page.author %}
+    {% set author = page.author %}
+    {% elif section.author %}
+    {% set author = section.author %}
+    {% elif config.author %}
+    {% set author = config.author %}
+    {% endif %}
+</head>
+
+<body>
+    <div id="container">
+        <div id="topbar">
+            <header>
+                <nav>
+                    <ul>
+                        <li><a href="{{ get_url(path='/') }}">Home</a></li>
+                        <li><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></li>
+                        <li><a href="{{ get_url(path='@/wiki/_index.md') }}">Wiki</a></li>
+                    </ul>
+                </nav>
+                <h1 class="title">{{ title }}</h1>
+                <p class="subtitle"><em>{{ description }}</em></p>
+                {% block header %}{% endblock header %}
+            </header>
+        </div>
+        <div id="content">
+            <main class="page-content">
+                {% block content %}{% endblock content %}
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

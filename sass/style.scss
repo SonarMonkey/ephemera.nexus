@@ -1,0 +1,36 @@
+$background: rgb(44, 45, 53);
+$foreground: rgb(233, 203, 203);
+
+#container {
+    max-width: 850px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    background-color: $background;
+    color: $foreground;
+
+    #topbar {
+        nav {
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            li {
+                display: inline-block;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+            }
+        }
+    }
+
+    #content {
+        background-color: $background;
+        color: $foreground;
+    }
+}
