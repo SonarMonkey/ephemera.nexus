@@ -1,5 +1,7 @@
-$background: rgb(44, 45, 53);
-$foreground: rgb(233, 203, 203);
+$background1: rgb(44, 45, 53);
+$foreground1: rgb(233, 203, 203);
+$background2: rgb(38, 47, 117);
+$foreground2: rgb(138, 120, 120);
 
 #container {
     max-width: 850px;
@@ -7,11 +9,12 @@ $foreground: rgb(233, 203, 203);
     margin-right: auto;
     margin-bottom: 0px;
     margin-left: auto;
-    background-color: $background;
-    color: $foreground;
 
-    #topbar {
-        nav {
+    .headerbox {
+        background-color: $background1;
+        color: $foreground1;
+
+        #navbar {
             ul {
                 margin: 0;
                 padding: 0;
@@ -27,10 +30,24 @@ $foreground: rgb(233, 203, 203);
                 text-decoration: none;
             }
         }
+
+        #titlebar {
+            text-decoration: underline;
+            transition: transform 250ms;
+        }
+
+        #titlebar:hover {
+            transform: scale(1.2);
+        }
+
+        #subtitlebar {
+            text-emphasis-style: 'x';
+            text-emphasis-position: under;
+        }
     }
 
-    #content {
-        background-color: $background;
-        color: $foreground;
+    .contentbox {
+        background-color: $background2;
+        color: $foreground2;
     }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -10,9 +10,9 @@
 
     {% if page.title %}
     {% set section = get_section(path=page.ancestors[1], metadata_only=true) %}
-    {% set title = [ config.title, section.title, page.title ] | join(sep=" -> ") %}
+    {% set title = [ config.title, section.title, page.title ] | join(sep=" > ") %}
     {% elif section.title %}
-    {% set title = [ config.title, section.title ] | join(sep=" -> ") %}
+    {% set title = [ config.title, section.title ] | join(sep=" > ") %}
     {% elif config.title %}
     {% set title = config.title %}
     {% endif %}
@@ -24,34 +24,33 @@
     {% elif config.description %}
     {% set description = config.description | truncate(length=150) %}
     {% endif %}
-
-    {% if page.author %}
-    {% set author = page.author %}
-    {% elif section.author %}
-    {% set author = section.author %}
-    {% elif config.author %}
-    {% set author = config.author %}
-    {% endif %}
 </head>
 
 <body>
     <div id="container">
-        <div id="topbar">
+        <div class="headerbox">
             <header>
-                <nav>
-                    <ul>
-                        <li><a href="{{ get_url(path='/') }}">Home</a></li>
-                        <li><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></li>
-                        <li><a href="{{ get_url(path='@/wiki/_index.md') }}">Wiki</a></li>
-                    </ul>
-                </nav>
-                <h1 class="title">{{ title }}</h1>
-                <p class="subtitle"><em>{{ description }}</em></p>
-                {% block header %}{% endblock header %}
+                <div id="navbar">
+                    <nav>
+                        <ul>
+                            <li><a href="{{ get_url(path='@/_index.md') }}">Home</a></li>
+                            <li><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></li>
+                            <li><a href="{{ get_url(path='@/wiki/_index.md') }}">Wiki</a></li>
+                            <li><a href="{{ get_url(path='@/about/_index.md') }}">About</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="titlebar">
+                    <h1 class="title">{{ title }}</h1>
+                </div>
+                <div id="subtitlebar">
+                    <p class="subtitle"><em>{{ description }}</em></p>
+                    {% block header %}{% endblock header %}
+                </div>
             </header>
         </div>
-        <div id="content">
-            <main class="page-content">
+        <div class="contentbox">
+            <main>
                 {% block content %}{% endblock content %}
             </main>
         </div>
