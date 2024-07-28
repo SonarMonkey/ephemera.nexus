@@ -1,7 +1,22 @@
-$background1: rgb(44, 45, 53);
-$foreground1: rgb(233, 203, 203);
-$background2: rgb(38, 47, 117);
-$foreground2: rgb(138, 120, 120);
+$base: #191724;
+$surface: #1f1d2e;
+$overlay: #26233a;
+$muted: #6e6a86;
+$subtle: #908caa;
+$text: #e0def4;
+$love: #eb6f92;
+$gold: #f6c177;
+$rose: #ebbcba;
+$pine: #31748f;
+$foam: #9ccfd8;
+$iris: #c4a7e7;
+$highlightLow: #21202e;
+$highlightMed: #403d52;
+$highlightHigh: #524f67;
+
+* {
+    background-color: $base;
+}
 
 #container {
     max-width: 850px;
@@ -11,8 +26,8 @@ $foreground2: rgb(138, 120, 120);
     margin-left: auto;
 
     .headerbox {
-        background-color: $background1;
-        color: $foreground1;
+        background-color: $surface;
+        color: $text;
 
         #navbar {
             ul {
@@ -26,13 +41,18 @@ $foreground2: rgb(138, 120, 120);
             }
 
             a {
+                color: $iris;
                 display: block;
                 text-decoration: none;
+                transition: transform 250ms;
+            }
+
+            a:hover {
+                transform: skew(-0.06turn, 18deg);
             }
         }
 
         #titlebar {
-            text-decoration: underline;
             transition: transform 250ms;
         }
 
@@ -41,13 +61,16 @@ $foreground2: rgb(138, 120, 120);
         }
 
         #subtitlebar {
-            text-emphasis-style: 'x';
-            text-emphasis-position: under;
+            transition: transform 250ms;
+        }
+
+        #subtitlebar:hover {
+            transform: scale(1.1);
         }
     }
 
     .contentbox {
-        background-color: $background2;
-        color: $foreground2;
+        background-color: $surface;
+        color: $text;
     }
 }
