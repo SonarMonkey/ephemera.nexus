@@ -1,5 +1,15 @@
 {% extends "base.html" %}
 
+{% block head %}
+<title>{{ section.title }}</title>
+{% endblock head %}
+
 {% block content %}
-{{ section.content | safe }}
+<div id="pagebar">
+    <h1>{{ section.title }}</h1>
+  </div>
+
+  <div id="content">
+    {{ section.content | safe }}
+  </div>
 {% endblock content %}

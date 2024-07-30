@@ -1,10 +1,22 @@
 {% extends "base.html" %}
 
+{% block head %}
+<title>{{ section.title }}</title>
+{% endblock head %}
+
 {% block content %}
-{{ section.content | safe }}
-<ul>
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }} - {{ page.date }} <br><em>{{ page.description }}</em></a></li>
-  {% endfor %}
-</ul>
+<div id="pagebar">
+  <h1 class="pagetitle">{{ section.title }}</h1>
+  <p class="pagedesc"><em>{{ section.description }}</em></p>
+</div>
+
+<div id="content">
+  {{ section.content | safe }}
+
+  <ul class="sectionlist">
+    {% for page in section.pages %}
+    <li><a href="{{ page.permalink | safe }}">{{ page.title }} - {{ page.date }} <br><em>{{ page.description }}</em></a></li>
+    {% endfor %}
+  </ul>
+
 {% endblock content %}

@@ -47,3 +47,16 @@ bottom_footnotes = true
 
 [extra]
 # Put all your custom variables here
+[[extra.nav.link]]
+name = "Home"
+path = '@/_index.md'
+[[extra.nav.link]]
+name = "Blog"
+path = '@/blog/_index.md'
+[[extra.nav.link]]
+name = "Wiki"
+path = '@/wiki/_index.md'
+[[extra.nav.link]]
+name = "About"
+path = '@/about/_index.md'
+

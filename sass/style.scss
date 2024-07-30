@@ -1,76 +1,148 @@
-$base: #191724;
-$surface: #1f1d2e;
-$overlay: #26233a;
-$muted: #6e6a86;
-$subtle: #908caa;
-$text: #e0def4;
-$love: #eb6f92;
-$gold: #f6c177;
-$rose: #ebbcba;
-$pine: #31748f;
-$foam: #9ccfd8;
-$iris: #c4a7e7;
-$highlightLow: #21202e;
-$highlightMed: #403d52;
-$highlightHigh: #524f67;
+// Imports
+@use 'rose-pine';
+
+// Color palette
+$red: rose-pine.$love;
+$yellow: rose-pine.$gold;
+$pink: rose-pine.$rose;
+$green: rose-pine.$pine;
+$blue: rose-pine.$foam;
+$purple: rose-pine.$iris;
+
+// Background colors
+$bg0: rose-pine.$base;
+$bg1: rose-pine.$surface;
+$bg2: rose-pine.$overlay;
+$bgalt0: rose-pine.$highlightLow;
+$bgalt1: rose-pine.$highlightMed;
+$bgalt2: rose-pine.$highlightHigh;
+
+// Text colors
+$text: rose-pine.$text;
+$subtext0: rose-pine.$subtle;
+$subtext1: rose-pine.$muted;
+$link0: $purple;
+$link1: $pink;
+
+// Images and assets
+$bgimage0: url("images/stars3.gif");
+
+// Main
+@font-face {
+    font-family: "FreePixel";
+    src:
+        local("FreePixel"),
+        url("fonts/FreePixel.ttf") format("truetype");
+}
 
 * {
-    background-color: $base;
+    font-family: "FreePixel";
+    box-sizing: border-box;
+}
+
+a {
+    color: $link0;
+
+    :visited {
+        color: $link1;
+    }
+}
+
+body {
+    background-image: $bgimage0;
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
 }
 
 #container {
-    max-width: 850px;
-    margin-top: 0px;
-    margin-right: auto;
-    margin-bottom: 0px;
-    margin-left: auto;
+    max-width: 900px;
+    margin: 0 auto;
+}
 
-    .headerbox {
-        background-color: $surface;
+
+// Header
+.headerbox {
+    width: 100%;
+    color: $text;
+    background-color: $bg0;
+
+    #crumbbar {
+        background-color: $bgalt2;
         color: $text;
+        padding: 0;
 
-        #navbar {
-            ul {
-                margin: 0;
-                padding: 0;
-                list-style: none;
-            }
-
-            li {
-                display: inline-block;
-            }
-
-            a {
-                color: $iris;
-                display: block;
-                text-decoration: none;
-                transition: transform 250ms;
-            }
-
-            a:hover {
-                transform: skew(-0.06turn, 18deg);
-            }
-        }
-
-        #titlebar {
-            transition: transform 250ms;
-        }
-
-        #titlebar:hover {
-            transform: scale(1.2);
-        }
-
-        #subtitlebar {
-            transition: transform 250ms;
-        }
-
-        #subtitlebar:hover {
-            transform: scale(1.1);
+        a:link,
+        :visited {
+            color: $link0;
         }
     }
 
-    .contentbox {
-        background-color: $surface;
-        color: $text;
+    #titlebar {
+        text-align: center;
+        padding: 0;
+
+        .title a {
+            color: $text;
+            text-decoration: none;
+            font-size: larger;
+        }
     }
+
+    #navbar {
+        width: 100%;
+        background-color: $bg2;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+            justify-content: space-evenly;
+            padding: 0;
+        }
+
+        li a {
+            color: $link0;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: larger;
+        }
+
+        li a:hover {
+            background-color: $bgalt2;
+            text-decoration: underline;
+        }
+    }
+}
+
+
+// Content
+.contentbox {
+    background-color: $bg1;
+    color: $text;
+    padding: 0;
+
+    #pagebar {
+        background-color: $bgalt1;
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #content {
+        padding: 0 1rem;
+    }
+
+    a:visited {
+        color: $link1;
+    }
+}
+
+// Footer
+.footerbox {
+    background-color: $bgalt0;
+    color: $text;
+    text-align: center;
+    padding: 1rem 1rem;
 }

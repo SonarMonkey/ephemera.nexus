@@ -7,52 +7,57 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}" />
-
-    {% if page.title %}
-    {% set section = get_section(path=page.ancestors[1], metadata_only=true) %}
-    {% set title = [ config.title, section.title, page.title ] | join(sep=" > ") %}
-    {% elif section.title %}
-    {% set title = [ config.title, section.title ] | join(sep=" > ") %}
-    {% elif config.title %}
-    {% set title = config.title %}
-    {% endif %}
-
-    {% if page.description %}
-    {% set description = page.description | truncate(length=150) %}
-    {% elif section.description %}
-    {% set description = section.description | truncate(length=150) %}
-    {% elif config.description %}
-    {% set description = config.description | truncate(length=150) %}
-    {% endif %}
+    <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}">
+    {% block head %}{% endblock head %}
 </head>
 
 <body>
     <div id="container">
         <div class="headerbox">
             <header>
+                {% if page.title %}
+                {% set path = page.components %}
+                {% elif section.title %}
+                {% set path = section.components %}
+                {% endif %}
+
+                <div id="crumbbar">
+                    <p class=breadcrumbs>
+                        / <a href="{{ get_url(path='@/_index.md') }}">home</a>
+                        {% set cur = "/" %}
+                        {% for elt in path %}
+                        {% set_global cur = cur ~ elt ~ "/" %}
+                        / <a href="{{cur}}">{{ elt }}</a>
+                        {% endfor %}
+                    </p>
+                </div>
+
+                <div id="titlebar">
+                    <h1 class="title"><a href="{{ get_url(path='@/_index.md') }}">{{config.title}}</a></h1>
+                    <p class="subtitle"><em>{{ config.description }}</em></p>
+                </div>
+
                 <div id="navbar">
                     <nav>
                         <ul>
-                            <li><a href="{{ get_url(path='@/_index.md') }}">Home</a></li>
-                            <li><a href="{{ get_url(path='@/blog/_index.md') }}">Blog</a></li>
-                            <li><a href="{{ get_url(path='@/wiki/_index.md') }}">Wiki</a></li>
-                            <li><a href="{{ get_url(path='@/about/_index.md') }}">About</a></li>
+                            {% for link in config.extra.nav.link %}
+                            <li><a href="{{ get_url(path=link.path) }}">{{link.name}}</a></li>
+                            {% endfor %}
                         </ul>
                     </nav>
                 </div>
-                <div id="titlebar">
-                    <h1 class="title">{{ title }}</h1>
-                </div>
-                <div id="subtitlebar">
-                    <p class="subtitle"><em>{{ description }}</em></p>
-                    {% block header %}{% endblock header %}
-                </div>
             </header>
         </div>
+
         <div class="contentbox">
             <main>
                 {% block content %}{% endblock content %}
             </main>
+        </div>
+        <div class="footerbox">
+            <footer>
+                <p>Site built with <a href="https://www.getzola.org">Zola</a> using the excellent <a href="https://rosepinetheme.com/">Rosé Pine</a> theme. &copy; 2024 SonarMonkey unless otherwise specified.</p>
+            </footer>
         </div>
     </div>
 </body>
