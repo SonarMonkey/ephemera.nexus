@@ -1,22 +1,20 @@
-{% extends "base.html" %}
-
-{% block head %}
+{% extends "base.html" %} {% block head %}
 <title>{{ config.title }} - {{ page.title }}</title>
-{% endblock head %}
-
-{% block content %}
+{% endblock head %} {% block content %}
 <div id="pagebar">
-    <div>
-        <h1 class="pagetitle">{{ page.title }}</h1>
-        <p class="pagedesc"><em>{{ page.description }}</em></p>
-    </div>
-    <div>
-        <p class="pagemeta">Published on <em>{{ page.date }}</em> by {{ config.author }}</p>
-    </div>
+  <div>
+    <h1 class="pagetitle">{{ page.title }}</h1>
+    <p class="pagedesc"><em>{{ page.description }}</em></p>
+  </div>
+  <div>
+    <p class="pagemeta">
+      Published on <em>{{ page.date }}</em> by {{ config.author }}
+    </p>
+  </div>
 </div>
 
 <div id="content">
-    {{ page.content | safe }}
-    <p class="signature">- the Sign Painter</p>
+  {{ page.content | safe }}
+  <p class="signature">- the Sign Painter</p>
 </div>
 {% endblock content %}
