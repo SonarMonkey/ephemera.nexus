@@ -1,71 +1,67 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link
-      rel="stylesheet"
-      href="{{ get_url(path='style.css', trailing_slash=false) | safe }}"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}"
-    />
-    {% block head %}{% endblock head %}
-  </head>
 
-  <body>
-    <div id="container">
-      <div class="headerbox">
-        <header>
-          {% if page.title %} {% set path = page.components %} {% elif
-          section.title %} {% set path = section.components %} {% endif %}
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}" />
+  <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}" />
+  {% block head %}{% endblock head %}
+</head>
 
-          <div id="crumbbar">
-            <p class="breadcrumbs">
-              / <a href="{{ get_url(path='@/_index.md') }}">home</a> {% set cur
-              = "/" %} {% for elt in path %} {% set_global cur = cur ~ elt ~ "/"
-              %} / <a href="{{cur}}">{{ elt }}</a>
-              {% endfor %}
-            </p>
-          </div>
-
-          <div id="titlebar">
-            <h1 class="title">
-              <a href="{{ get_url(path='@/_index.md') }}">{{config.title}}</a>
-            </h1>
-            <p class="subtitle"><em>{{ config.description }}</em></p>
-          </div>
-
-          <div id="navbar">
-            <nav>
-              <ul>
-                {% for link in config.extra.nav.link %}
-                <li>
-                  <a href="{{ get_url(path=link.path) }}">{{link.name}}</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </nav>
-          </div>
-        </header>
-      </div>
-
-      <div class="contentbox">
-        <main>{% block content %}{% endblock content %}</main>
-      </div>
-      <div class="footerbox">
-        <footer>
-          <p>
-            Site built with <a href="https://www.getzola.org">Zola</a> using the
-            excellent <a href="https://rosepinetheme.com/">Rosé Pine</a> theme.
-            &copy; 2024 SonarMonkey unless otherwise specified.
+<body>
+  <div id="container">
+    <div class="headerbox">
+      <header>
+        {% if page.title %}
+        {% set path = page.components %}
+        {% elif section.title %}
+        {% set path = section.components %}
+        {% endif %}
+        <div id="crumbbar">
+          <p class="breadcrumbs">
+            / <a href="{{ get_url(path='@/_index.md') }}">home</a>
+            {% set cur = "/" %}
+            {% for elt in path %}
+            {% set_global cur = cur ~ elt ~ "/" %}
+            / <a href="{{cur}}">{{ elt }}</a>
+            {% endfor %}
           </p>
-        </footer>
-      </div>
+        </div>
+        <div id="titlebar">
+          <h1 class="title">
+            <a href="{{ get_url(path='@/_index.md') }}">{{config.title}}</a>
+          </h1>
+          <p class="subtitle"><em>{{ config.description }}</em></p>
+        </div>
+        <div id="navbar">
+          <nav>
+            <ul>
+              {% for link in config.extra.nav.link %}
+              <li>
+                <a href="{{ get_url(path=link.path) }}">{{link.name}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </header>
     </div>
-  </body>
+    <div class="contentbox">
+      <main>{% block content %}{% endblock content %}</main>
+    </div>
+    <div class="footerbox">
+      <footer>
+        <p>
+          Site built with <a href="https://www.getzola.org">Zola</a> using the
+          excellent <a href="https://rosepinetheme.com/">Rosé Pine</a> theme.
+          &copy; 2024 SonarMonkey unless otherwise specified.
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+
 </html>

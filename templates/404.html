@@ -1,98 +1,84 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-    <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
-    <meta content="width=device-width, initial-scale=1" name="viewport" />
-    <link rel="stylesheet" href="{{ config.base_url }}/style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="{{ config.base_url }}/favicon.ico"
-    />
-    <title>{{ config.title }} - 404 Not Found</title>
-  </head>
 
-  <body>
-    <div id="container">
-      <div class="headerbox">
-        <header>
-          <div id="crumbbar">
-            <p class="breadcrumbs">
-              / <a href="{{ config.base_url }}/404.html">404</a>
-            </p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+  <meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <link rel="stylesheet" href="{{ config.base_url }}/style.css" />
+  <link rel="icon" type="image/x-icon" href="{{ config.base_url }}/favicon.ico" />
+  <title>{{ config.title }} - 404 Not Found</title>
+</head>
 
-          <div id="titlebar">
-            <h1 class="title">
-              <a href="{{ config.base_url }}">{{ config.title }}</a>
-            </h1>
-            <p class="subtitle"><em>{{ config.description }}</em></p>
-          </div>
-
-          <div id="navbar">
-            <nav>
-              <ul>
-                {% for link in config.extra.nav.link %}
-                <li>
-                  <a href="{{ get_url(path=link.path) }}">{{link.name}}</a>
-                </li>
-                {% endfor %}
-              </ul>
-            </nav>
-          </div>
-        </header>
-      </div>
-
-      <div class="contentbox">
-        <main>
-          <div id="pagebar">
-            <div>
-              <h1 class="pagetitle glitch" data-text="404 Not Found">
-                404 Not Found
-              </h1>
-              <p
-                class="pagedesc glitch"
-                data-text="You seem to have stumbled off the path"
-              >
-                <em>You seem to have stumbled off the path</em>
-              </p>
-            </div>
-          </div>
-
-          <div id="content">
-            <p>
-              ...How'd you get here? You know you can go
-              <a href="{{ config.base_url }}">home</a> right?
-            </p>
-            <p>
-              If you followed a link you thought would work, please consider
-              raising an issue on the
-              <a href="https://github.com/SonarMonkey/ephemera.nexus/issues"
-                >GitHub for this site</a
-              >
-              so that I can fix it! Eventually I'll have a contact page so you
-              don't have to go to the trouble but, yeah.
-            </p>
-            <p>If you're here on purpose, uhh. Here's a lil guy I guess?</p>
-            <img
-              src="{{ config.base_url }}/images/goo_ball.webp"
-              alt="A goo ball from the game World of Goo by 2D Boy"
-            />
-            <p class="signature">- the Sign Painter</p>
-          </div>
-        </main>
-      </div>
-      <div class="footerbox">
-        <footer>
-          <p>
-            Site built with <a href="https://www.getzola.org">Zola</a> using the
-            excellent <a href="https://rosepinetheme.com/">Rosé Pine</a> theme.
-            &copy; 2024 SonarMonkey unless otherwise specified.
+<body>
+  <div id="container">
+    <div class="headerbox">
+      <header>
+        <div id="crumbbar">
+          <p class="breadcrumbs">
+            / <a href="{{ config.base_url }}/404.html">404</a>
           </p>
-        </footer>
-      </div>
+        </div>
+        <div id="titlebar">
+          <h1 class="title">
+            <a href="{{ config.base_url }}">{{ config.title }}</a>
+          </h1>
+          <p class="subtitle"><em>{{ config.description }}</em></p>
+        </div>
+        <div id="navbar">
+          <nav>
+            <ul>
+              {% for link in config.extra.nav.link %}
+              <li>
+                <a href="{{ get_url(path=link.path) }}">{{link.name}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </nav>
+        </div>
+      </header>
     </div>
-  </body>
+    <div class="contentbox">
+      <main>
+        <div id="pagebar">
+          <div>
+            <h1 class="pagetitle glitch" data-text="404 Not Found">
+              404 Not Found
+            </h1>
+            <p class="pagedesc glitch" data-text="You seem to have stumbled off the path">
+              <em>You seem to have stumbled off the path</em>
+            </p>
+          </div>
+        </div>
+        <div id="content">
+          <p>
+            ...How'd you get here? You know you can go
+            <a href="{{ config.base_url }}">home</a> right?
+          </p>
+          <p>
+            If you followed a link you thought would work, please consider
+            raising an issue on the
+            <a href="https://github.com/SonarMonkey/ephemera.nexus/issues">GitHub for this site</a>
+            so that I can fix it! Eventually I'll have a contact page so you
+            don't have to go to the trouble but, yeah.
+          </p>
+          <p>If you're here on purpose, uhh. Here's a lil guy I guess?</p>
+          <img src="{{ config.base_url }}/images/goo_ball.webp" alt="A goo ball from the game World of Goo by 2D Boy" />
+          <p class="signature">- the Sign Painter</p>
+        </div>
+      </main>
+    </div>
+    <div class="footerbox">
+      <footer>
+        <p>
+          Site built with <a href="https://www.getzola.org">Zola</a> using the
+          excellent <a href="https://rosepinetheme.com/">Rosé Pine</a> theme.
+          &copy; 2024 SonarMonkey unless otherwise specified.
+        </p>
+      </footer>
+    </div>
+  </div>
+</body>
+
 </html>

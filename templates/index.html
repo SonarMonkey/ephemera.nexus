@@ -1,9 +1,12 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %}
+
+{% block head %}
 <title>{{ config.title }} - {{ section.title }}</title>
-{% endblock head %} {% block content %}
+{% endblock head %}
+
+{% block content %}
 <div id="pagebar">
   <h1 class="pagetitle">{{ section.title }}</h1>
 </div>
-
 <div id="content">{{ section.content | safe }}</div>
 {% endblock content %}

@@ -1,4 +1,5 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %}
+{% block head %}
 <title>{{ config.title }} - {{ section.title }}</title>
 {% endblock head %} {% block content %}
 <div id="pagebar">
@@ -7,21 +8,14 @@
     <p class="pagedesc"><em>{{ section.description }}</em></p>
   </div>
 </div>
-
 <div id="content">
   {{ section.content | safe }}
-
   <ul class="sectionlist">
     {% for page in section.pages %}
     <li>
-      <a href="{{ page.permalink | safe }}"
-        >{{ page.title }} - {{ page.date }} <br /><em
-          >{{ page.description }}</em
-        ></a
-      >
+      <a href="{{ page.permalink | safe }}">{{ page.title }} - {{ page.date }} <br /><em>{{ page.description }}</em></a>
     </li>
     {% endfor %}
   </ul>
-
   {% endblock content %}
 </div>

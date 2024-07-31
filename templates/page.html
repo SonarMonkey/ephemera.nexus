@@ -1,6 +1,10 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %}
+
+{% block head %}
 <title>{{ config.title }} - {{ page.title }}</title>
-{% endblock head %} {% block content %}
+{% endblock head %}
+
+{% block content %}
 <div id="pagebar">
   <div>
     <h1 class="pagetitle">{{ page.title }}</h1>
