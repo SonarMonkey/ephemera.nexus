@@ -138,10 +138,43 @@ body {
   }
 }
 
+// Asides
+.badges {
+  #badgelist {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+}
+
+.webrings {
+  background-color: $bgalt0;
+  color: $text;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 1rem;
+
+  #ringnav {
+    padding: 1rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
+
 // Footer
 .footerbox {
   background-color: $bgalt0;
   color: $text;
   text-align: center;
-  padding: 1rem 1rem;
+  padding: 0;
+
+  footer {
+    padding: 0 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
