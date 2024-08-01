@@ -60,3 +60,35 @@ path = '@/wiki/_index.md'
 name = "About"
 path = '@/about/_index.md'
 
+[[extra.badge.link]]
+alt = "css is difficult"
+path = '@/badges/cssdif.gif'
+link = ""
+[[extra.badge.link]]
+alt = "bookmark this page"
+path = '@/badges/bookmark_this_page.gif'
+link = ""
+[[extra.badge.link]]
+alt = "made for dark mode"
+path = '@/badges/dark-mode.png'
+link = ""
+[[extra.badge.link]]
+alt = "iframes suck"
+path = '@/badges/frames-suck.png'
+link = ""
+[[extra.badge.link]]
+alt = "proudly 98% javascript-free"
+path = '@/badges/javascript-zero.png'
+link = ""
+[[extra.badge.link]]
+alt = "say no to web3"
+path = '@/badges/keep.webp'
+link = ""
+[[extra.badge.link]]
+alt = "mobile-friendly site"
+path = '@/badges/mobilefriendly.png'
+link = ""
+[[extra.badge.link]]
+alt = "badges from seirdy.one"
+path = '@/badges/seirdyone.gif'
+link = ""
