@@ -16,15 +16,6 @@ While there are definitely other good guides all over the place, I'm opinionated
 
 Yes, also that. I've always been in love with the *idea* of running a blog, and there are several of my previous attempts probably still floating around the internet somewhere. But, I've always had trouble sticking to the habit, so I'm going to try and ease off my expectations a bit here and just keep things casual. Only time will tell, I suppose.
 
-## Buttons! Badges!
+## Also, hey
 
-Needs some formatting and about 100 more of these but. God I love these things.
-
-![css is difficult](badges/cssdif.gif)
-![bookmark this page](badges/bookmark_this_page.gif)
-![made for dark mode](badges/dark-mode.png)
-![iframes suck](badges/frames-suck.png)
-![proudly 98% javascript-free](badges/javascript-zero.png)
-[![say no to web3](badges/keep.webp)](https://yesterweb.org/no-to-web3/)
-![mobile friendly site](badges/mobilefriendly.png)
-[![seirdy.one's badges](badges/seirdyone.gif)](https://seirdy.one/meta/badges/)
+Look at those cool badges down there! God I love those things. Working on getting more. Also, this site is part of the **BRUH ZONE** webring. Like this site it is also not finished yet so you will probably encounter some dead links, but yeah! Check those cool people out.
