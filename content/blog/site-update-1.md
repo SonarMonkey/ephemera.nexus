@@ -6,7 +6,7 @@ date = "2024-08-02"
 
 ## We're Online
 
-After a bit more tweaking, the site is fully up. It even has some fancy buttons, and is incorporated into the (partially complete) BRUH ZONE webring!
+After a bit more tweaking, the **EPHEMERA NEXUS** is fully up. It even has some fancy buttons, and is incorporated into the (partially complete) **BRUH ZONE** webring!
 
 Overall, I'm very happy with how things are going so far. In the past, I've used pre-made theme packages, but I think that took some of the potential joy out of site-crafting. The layout you see here is almost entirely handwritten by me!
 
@@ -16,7 +16,7 @@ Not everything is completely original, though, and I wanna shout-out some of the
 
 2. The glitch effect found on the [404 page](/404/) was written by [Kay Dev on Codepen](https://codepen.io/kay_dev/pen/YLdVjw) and works quite nicely.
 
-3. The webring was set up by fellow BRUH ZONE member [friday-girl.neocities.org](https://friday-girl.neocities.org) using a neat little Javascript webring creator called [Linkcircle](https://dabric.xyz/post/linkcircle/).
+3. The webring was set up by fellow **BRUH ZONE** member [friday-girl.neocities.org](https://friday-girl.neocities.org) using a neat little Javascript webring creator called [Linkcircle](https://dabric.xyz/post/linkcircle/).
 
 4. The site itself is built with my new favorite static site generator [Zola](https://www.getzola.org) which is very cool because (among other things) it is a single executable with no external dependencies.
 
