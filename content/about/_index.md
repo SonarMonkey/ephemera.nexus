@@ -17,7 +17,7 @@ Two, I want to be able to contribute something back to the open-source informati
 
 ## Who are you?
 
-My name is Riley, known better as SonarMonkey or the Vibe Comptroller. I'm an IT professional and hobbyist, doing this for fun and learning.
+My name is Riley, known better as SonarMonkey or the Vibe Comptroller. I'm an IT professional and hobbyist, doing this for fun and learning. Eventually there will be some kind of contact form somewhere on this site, but until then that's all I got.
 
 ## What else do you do?
 
@@ -25,12 +25,18 @@ Most recently, I've been getting into Nix(OS), and you can see my progress on th
 
 ## Credits
 
-All the other stuff besides me that made this site possible.
+Most of the other stuff besides me that made this site possible:
 
 - [Zola](https://www.getzola.org) generates this site
+
 - [Rosé Pine](https://rosepinetheme.com/) the current color scheme
+
 - [goblin-heart/sadgrl.online](https://goblin-heart.net/sadgrl/) lots of useful links and resources, also that starry background!
+
 - [The Cyber Vanguard](https://cyber.dabamos.de/) many of the badges on the homepage
+
 - [Seirdy](https://seirdy.one) some of the other badges on the home page
+
 - [HTML Dog](https://www.htmldog.com/) excellent tutorials for HTML and CSS
+
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web) an extremely complete reference and set of tutorials for tons of web technology

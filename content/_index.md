@@ -4,7 +4,7 @@ title = "Home"
 
 ## Welcome
 
-Hi there! Welcome to the **EPHEMERA NEXUS**. Things are under construction right now, but eventually this will contain a "[blog](blog/)" (read: poorly maintained collection of rambles), and a [wiki](wiki/), which *should* be better-maintained and host some guides and stuff for un-fucking your personal experience of the internet.
+Hi there! Welcome to the **EPHEMERA NEXUS**. Things are under construction right now, but eventually this will contain a "[blog](blog/)" (read: poorly maintained collection of rambles), and a [wiki](wiki/), which _should_ be better-maintained and host some guides and stuff for un-fucking your personal experience of the internet.
 
 ## A Wiki, You Say?
 
@@ -12,9 +12,9 @@ Yep! I do a lot of work to make my personal computing and internet experience no
 
 While there are definitely other good guides all over the place, I'm opinionated and like doing things (especially unnecessary things). Plus, I wanna give something back to the world of open-source software and information that I've benefited from for so long, and this felt like a solid start with my skillset. :shrug:
 
-## *AND* a Blog?
+## _AND_ a Blog?
 
-Yes, also that. I've always been in love with the *idea* of running a blog, and there are several of my previous attempts probably still floating around the internet somewhere. But, I've always had trouble sticking to the habit, so I'm going to try and ease off my expectations a bit here and just keep things casual. Only time will tell, I suppose.
+Yes, also that. I've always been in love with the _idea_ of running a blog, and there are several of my previous attempts probably still floating around the internet somewhere. But, I've always had trouble sticking to the habit, so I'm going to try and ease off my expectations a bit here and just keep things casual. Only time will tell, I suppose.
 
 ## Also, hey
 

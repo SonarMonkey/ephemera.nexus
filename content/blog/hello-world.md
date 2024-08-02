@@ -11,6 +11,6 @@ After a few days of proper, concerted effort, I finally have this site at "good 
 
 Learning Zola to the point of being able to deploy this was pretty easy, and the Tera templating it uses is quite cool. Overall recommend compared so some of the other static site generators I've tried in the past.
 
-Writing actual plain(ish) HTML and (S)CSS for the first time in *several* years has also been ... something resembling fun. Much easier than it has been in the past, but I actually work in the field now and have a bit more general knowledge that my past attempts at this stuff.
+Writing actual plain(ish) HTML and (S)CSS for the first time in _several_ years has also been ... something resembling fun. Much easier than it has been in the past, but I actually work in the field now and have a bit more general knowledge that my past attempts at this stuff.
 
 We'll see how it goes, I guess. Trying to go live as of now to try out this "Cloudflare Pages" thing. First try lost my `style.css` so... We'll see.
