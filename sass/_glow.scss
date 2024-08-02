@@ -1,0 +1,16 @@
+@use "rose-pine";
+
+strong {
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 2px rose-pine.$text, 0 0 4px rose-pine.$text, 0 0 6px rose-pine.$rose, 0 0 8px rose-pine.$rose,
+      0 0 10px rose-pine.$rose, 0 0 12px rose-pine.$rose, 0 0 14px rose-pine.$rose;
+  }
+  to {
+    text-shadow: 0 0 4px rose-pine.$text, 0 0 6px rose-pine.$love, 0 0 8px rose-pine.$love, 0 0 10px rose-pine.$love,
+      0 0 12px rose-pine.$love, 0 0 14px rose-pine.$love, 0 0 16px rose-pine.$love;
+  }
+}
