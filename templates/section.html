@@ -13,7 +13,7 @@
   <ul class="sectionlist">
     {% for page in section.pages %}
     <li>
-      <a href="{{ page.permalink | safe }}">{{ page.title }} - {{ page.date }} <br /><em>{{ page.description }}</em></a>
+      <a href="{{ page.permalink | safe }}">{{ page.title }} - {{ page.date }} - <em>{{ page.description }}</em></a>
     </li>
     {% endfor %}
   </ul>
